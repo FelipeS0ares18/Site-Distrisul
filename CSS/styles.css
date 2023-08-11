@@ -165,3 +165,9 @@ input {
         font-size: 20px;
     }
 }
+
+@media (min-width: 769px) {
+    #menu-btn {
+        display: none;
+    }
+}
