@@ -5,39 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distrisul</title>
-    <link rel="stylesheet" href="CSS/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <style>
+        @media (max-width: 768px) {
+            #nav.show-nav {
+                display: block;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header>
         <div id="title">
             <h1>Distrisul Distribuidora</h1>
+            <button id="menu-btn"><i class="fas fa-bars icon"></i></button>
         </div>
 
-        <ul>
+        <ul id="nav">
             <a href="#"><li>Inicio</li></a>
             <a href="#"><li>Sobre</li></a>
             <a href="#"><li>Produtos</li></a>
             <a href="#"><li>Contato</li></a>
-            <a href="#"id="inscreva-ser-btn"><li>Ja tem uma conta?</li></a>
+            <a href="#" id="inscreva-ser-btn"><li>Ja tem uma conta?</li></a>
         </ul>
     </header>
 
     <main>
         <aside>
             <h2>Cadastre-se agora</h2>
-                <h3>E seja um de nossos parceiros</h3>
+            <h3>E seja um de nossos parceiros</h3>
             
             <p>A mais de 10 anos entregando o melhor para o seu mercado!</p>
             <form>
-              <input type="text" placeholder="Nome">
-              <input type="email" placeholder="E-mail">
-              <input type="submit" id="botao-sub" value="Enviar">
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <input type="submit" id="botao-sub" value="Enviar">
             </form>
         </aside>
-         <img src="Images/Distrisul - Copia.jpg" alt="Logo Distrilsul">
+        <img src="Images/Distrisul - Copia.jpg" alt="Logo Distrilsul">
         <article>
-
         </article>
     </main>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const nav = document.getElementById("nav");
+
+        menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("show-nav");
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest("nav") && event.target !== menuBtn) {
+                nav.classList.remove("show-nav");
+            }
+        });
+    </script>
 </body>
 </html>
