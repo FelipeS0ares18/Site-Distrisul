@@ -54,7 +54,6 @@ a:hover{
 
 h1{
     font-weight: 100;
-    font-weight: bold;
 }
 
 main{
@@ -69,6 +68,13 @@ h2{
     color: var(--azul);
 }
 
+
+
+h3 {
+    font-size: 35px;
+    color: var(--azul);
+}
+
 p{
     line-height: 15px;
     max-width: 500px;
@@ -78,6 +84,9 @@ img{
     border-radius: 50%;
     width: 450px;
     height: 450px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 90rem;
 } 
 
 form{
